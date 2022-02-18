@@ -6,6 +6,11 @@ const routes: Routes = [
     path: '',
     loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
   },
+  {
+    path: 'sing-in',
+    loadChildren: () =>
+      import('./sing-in/sing-in.module').then((m) => m.SingInModule),
+  },
 ];
 
 @NgModule({
