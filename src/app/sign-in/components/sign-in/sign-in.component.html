@@ -33,6 +33,29 @@
       </nb-form-field>
       <button nbButton status="primary" type="submit">Ingresar</button>
     </form>
-    <button (click)="signInWithGoogle()" nbButton status="primary"><nb-icon icon="google-outline"></nb-icon>Google</button>
+    <div class="links">
+      <small>
+        ¿Olvidaste tu contraseña?
+        <a href="#" class="text-primary">
+          Haz clic aquí
+        </a>
+      </small>
+      <small>
+        ¿No tienes una cuenta?
+        <a href="#" class="text-primary">
+          Crea una cuenta
+        </a>
+      </small>
+    </div>
+    <div class="social-media">
+      <p>O continua con tu red social preferida</p>
+      <button
+        (click)="signInWithGoogle()"
+        nbButton
+        ghost
+        status="basic">
+        <nb-icon icon="google-outline"></nb-icon>
+      </button>
+    </div>
   </nb-card-body>
 </nb-card>
