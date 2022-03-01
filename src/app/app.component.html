@@ -1,9 +1,15 @@
-<nb-layout center>
-  <nb-layout-header>Awesome Company</nb-layout-header>
+<nb-layout>
+  <nb-layout-header>
+    <h1>Tic Tac Toe</h1>
+  </nb-layout-header>
 
   <nb-layout-column>
     <router-outlet></router-outlet>
   </nb-layout-column>
 
-  <nb-layout-footer>Contact us</nb-layout-footer>
+  <nb-layout-footer>
+    <small>
+      &copy; {{ today.getFullYear() }} <a href="https://www.juanjodev02.com">Juan José Jaramillo</a>
+    </small>
+  </nb-layout-footer>
 </nb-layout>
