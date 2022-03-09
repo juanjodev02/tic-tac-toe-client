@@ -1,0 +1,12 @@
+<nb-card>
+  <nb-card-header>
+    <h2>{{incomingPlayer?.name}} quiere jugar contigo</h2>
+  </nb-card-header>
+  <nb-card-body>
+    <h3>¿Aceptas la partida?</h3>
+  </nb-card-body>
+  <nb-card-footer>
+    <button nbButton status="success" (click)="accept()">Aceptar</button>
+    <button nbButton status="danger" (click)="decline()">Rechazar</button>
+  </nb-card-footer>
+</nb-card>

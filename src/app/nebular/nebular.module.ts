@@ -3,11 +3,18 @@ import { CommonModule } from '@angular/common';
 import {
   NbButtonModule,
   NbCardModule,
+  NbContextMenuModule,
+  NbDialogModule,
   NbFormFieldModule,
   NbIconModule,
   NbInputModule,
   NbLayoutModule,
+  NbListModule,
+  NbMenuModule,
+  NbSpinnerModule,
   NbThemeModule,
+  NbToastrModule,
+  NbUserModule,
 } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 
@@ -24,6 +31,15 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
     NbFormFieldModule,
     NbEvaIconsModule,
     NbIconModule,
+    NbUserModule,
+    NbMenuModule.forRoot(),
+    NbContextMenuModule,
+    NbSpinnerModule,
+    NbListModule,
+    NbDialogModule.forRoot({
+      closeOnEsc: false,
+    }),
+    NbToastrModule.forRoot(),
   ],
   exports: [
     NbEvaIconsModule,
@@ -35,6 +51,13 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
     NbButtonModule,
     NbEvaIconsModule,
     NbIconModule,
+    NbUserModule,
+    NbMenuModule,
+    NbContextMenuModule,
+    NbSpinnerModule,
+    NbListModule,
+    NbDialogModule,
+    NbToastrModule,
   ],
 })
 export class NebularModule {}

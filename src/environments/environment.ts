@@ -12,6 +12,7 @@ export const environment = {
     appId: '1:284464886104:web:64c38e95d2f6c6ee85752d',
   },
   production: false,
+  apiBaseUrl: 'http://localhost:3000',
 };
 
 /*

@@ -8,9 +8,15 @@ import { NebularModule } from './nebular/nebular.module';
 import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireModule } from '@angular/fire/compat';
+import { SingOutComponent } from './components/sing-out/sing-out.component';
+import { HttpClientModule } from '@angular/common/http';
+import { SocketIoModule } from 'ngx-socket-io';
+import { UsersSocket } from './sockets/UsersSocket';
+import { GamesSocket } from './sockets/GamesSocket';
+import { RequestGameDialogComponent } from './components/request-game-dialog/request-game-dialog.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, SingOutComponent, RequestGameDialogComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -18,8 +24,10 @@ import { AngularFireModule } from '@angular/fire/compat';
     NebularModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebase),
+    HttpClientModule,
+    SocketIoModule,
   ],
-  providers: [],
+  providers: [UsersSocket, GamesSocket],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

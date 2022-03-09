@@ -11,8 +11,27 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-nb-list-item {
+
+#tic-tac-toe-board {
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.canvas-wrapper-parent {
+  transform-style: preserver-3d;
+}
+
+#confetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
+}
+
+nb-user {
+  margin: 1em 0;
 }

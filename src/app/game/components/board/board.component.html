@@ -1,0 +1,25 @@
+<nb-layout class="center-wrapper-parent">
+  <nb-layout-column>
+    <div>
+      Jugando con:
+      <nb-user
+        name="{{ foreranUser?.name }} {{ foreranUser?.lastName }}"
+        picture="{{ foreranUser?.photoURL }}"
+      ></nb-user>
+    </div>
+    <div *ngIf="enableMovement">
+      <p>Tu turno</p>
+    </div>
+    <div *ngIf="!enableMovement">
+      <p>Esperando movimiento</p>
+    </div>
+    <div class="canvas-wrapper">
+      <canvas id="tic-tac-toe-board" class="center-v"></canvas>
+    </div>
+    <div *ngIf="gameIsOver">
+      <h1>Juego terminado</h1>
+      <h2>Ganador: {{ currentWinner?.name }}</h2>
+      <!-- <button (click)="resetGame()">Reset Game</button> -->
+    </div>
+  </nb-layout-column>
+</nb-layout>
